@@ -50,6 +50,7 @@ class PushplusPush(IPushUtil):
             "token": self.pushplus_token,
             "template": "markdown",
             "title": "{push_title}-{title}".format(push_title=self.push_title, title=title),
+            "channel": "mail",
             "content": content
         }
         res = requests.post("http://www.pushplus.plus/send", data=d)
